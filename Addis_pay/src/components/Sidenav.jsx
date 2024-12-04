@@ -16,7 +16,7 @@ function Sidenav(){
                 <h1 className="text-2x1 font-bold mb-8">Addispay</h1>
                 <nav>
                     {menuItems.map((item,index) =>(
-                        <div key = {index} className={`flex items-center p-3 mb-2 rounded ${item.active ? 'bg-white text-emerald-500' : 'hover: bg-emerald-600'}`}>
+                        <div key = {index} className={`flex items-center p-3 mb-2 rounded ${item.active ? 'bg-white text-emerald-500' : 'hover:bg-emerald-600'}`}>
                             <span className="mr-3">{item.icon}</span>
                             <span>{item.label}</span>
                         </div>

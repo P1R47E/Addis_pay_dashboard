@@ -11,7 +11,7 @@ function Header(){
                     Test mode
                 </button>
                 <div className="relative">
-                    <span classname="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center ">
+                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center ">
                         2
                     </span>
                     <span>🔔</span>
@@ -22,7 +22,7 @@ function Header(){
             </div>
         </div>
         <div className="mt-4">
-            <div classname="flex space-x-4">
+            <div className="flex space-x-4">
                 <button className="border-b-2 border-emerald-500 pb-2">To pay</button>
                 <button className="text-gray-500 ml-4">My requests</button> 
 

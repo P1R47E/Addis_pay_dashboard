@@ -1,15 +1,15 @@
 import React from "react";
 function Tableload(){
-    const [status,setStatus] = useState('pending');
-    const [sortBy,setsortBy] = useState('Amount');
-    const [sortOrder,setSortOrder] = useState('Increasing');
+    // const [status,setStatus] = useState('pending');
+    // const [sortBy,setsortBy] = useState('Amount');
+    // const [sortOrder,setSortOrder] = useState('Increasing');
 
     const tableData = [
-        {id:1,user:"mariamawit mambwe", startDate: "Mar 22,2010", service: "Ride",amount:"45,561" , dueDate:"Mar 19,2007"},
-        {id:1,user:"Mehdi okoro", startDate: "Apr18,2021", service: "Ride",amount:"68,027" , dueDate:"Sep12,2014"},
-        {id:1,user:"Tawana Bankole", startDate: "Jan 22,2023", service: "Ride",amount:"93,959" , dueDate:"Mar 19,2007"},
-        {id:1,user:"Tamira mambwe", startDate: "Jul 18,2021", service: "Ride",amount:"17,035" , dueDate:"Mar 19,2007"},
-        {id:1,user:"KamauAdimbola", startDate: "Mar 13,2023", service: "Ride",amount:"26,187" , dueDate:"Mar 19,2007"}
+        {id:1,user:"mariamawit mambwe", startDate: "Mar 22,2010", service: "Ride",amount:"45,561" , dueDate:"Mar 19,2007",Status:"pending"},
+        {id:1,user:"Mehdi okoro", startDate: "Apr18,2021", service: "Ride",amount:"68,027" , dueDate:"Sep12,2014",Status:"pending"},
+        {id:1,user:"Tawana Bankole", startDate: "Jan 22,2023", service: "Ride",amount:"93,959" , dueDate:"Mar 19,2007",Status:"pending"},
+        {id:1,user:"Tamira mambwe", startDate: "Jul 18,2021", service: "Ride",amount:"17,035" , dueDate:"Mar 19,2007",Status:"pending"},
+        {id:1,user:"KamauAdimbola", startDate: "Mar 13,2023", service: "Ride",amount:"26,187" , dueDate:"Mar 19,2007",Status:"pending"}
     ];
     return(
         <div className="bg-white rounded-lg shadow">
@@ -50,6 +50,24 @@ function Tableload(){
                     </tr>
                 </thead>
             </table>
+            <tbody>
+                {tableData.map((row,index) => (
+                    <tr key={index} className="border-t">
+                        <td className="px-4 py-2 ">{row.id}</td>
+                        <td className="px-4 py-2 ">{row.user}</td>
+                        <td className="px-4 py-2 ">{row.start}</td>
+                        <td className="px-4 py-2 ">{row.service}</td>
+                        <td className="px-4 py-2 ">{row.amount}</td>
+                        <td className="px-4 py-2 ">{row.dueDate}</td>
+                        <td className="px-4 py-2 ">{row.Status}</td>
+                        <td className="px-4 py-2 ">
+                             <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
+                                     Pending
+                            </span>
+                        </td>
+                    </tr>
+                ))}
+            </tbody>
 
         </div>
     );
