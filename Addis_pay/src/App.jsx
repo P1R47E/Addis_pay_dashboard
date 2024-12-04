@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Sidenav from "./components/Sidenav";
 import Header from "./components/Header";
-import Table from "./components/Table";
+import Tableload from "./components/Tableload";
+
 function App (){
   return (
     <div className="flex min-h-screen bg-gray-50">
@@ -9,7 +10,7 @@ function App (){
       <div className="flex-1">
         <Header/>
         <main className="p-6">
-          <Table/>
+          <Tableload/>
         </main>
 
       </div>
