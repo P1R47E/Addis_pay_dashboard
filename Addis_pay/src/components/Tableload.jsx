@@ -49,25 +49,26 @@ function Tableload(){
                       <th className="px-4 py-2 text-left">Status</th>  
                     </tr>
                 </thead>
+                <tbody>
+                    {tableData.map((row,index) => (
+                        <tr key={index} className="border-t">
+                            <td className="px-4 py-2 ">{row.id}</td>
+                            <td className="px-4 py-2 ">{row.user}</td>
+                            <td className="px-4 py-2 ">{row.startDate}</td>
+                            <td className="px-4 py-2 ">{row.service}</td>
+                            <td className="px-4 py-2 ">{row.amount}</td>
+                            <td className="px-4 py-2 ">{row.dueDate}</td>
+                            <td className="px-4 py-2 ">
+                                <span className={`px-2 py-1 rounded ${
+                                    row.Status === 'pending' 
+                                    ? 'bg-yellow-100 text-yellow-800': 'bg-green-100 text-green-800'}`}>
+                                    {row.Status}
+                                </span>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
             </table>
-            <tbody>
-                {tableData.map((row,index) => (
-                    <tr key={index} className="border-t">
-                        <td className="px-4 py-2 ">{row.id}</td>
-                        <td className="px-4 py-2 ">{row.user}</td>
-                        <td className="px-4 py-2 ">{row.start}</td>
-                        <td className="px-4 py-2 ">{row.service}</td>
-                        <td className="px-4 py-2 ">{row.amount}</td>
-                        <td className="px-4 py-2 ">{row.dueDate}</td>
-                        <td className="px-4 py-2 ">{row.Status}</td>
-                        <td className="px-4 py-2 ">
-                             <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
-                                     Pending
-                            </span>
-                        </td>
-                    </tr>
-                ))}
-            </tbody>
 
         </div>
     );
