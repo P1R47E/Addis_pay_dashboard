@@ -1,4 +1,5 @@
 import React from "react";
+import { FaTachometerAlt, FaBell, FaUniversity, FaUsers, FaRegFileAlt, FaCreditCard, FaBook, FaMoneyBill, FaInbox } from "react-icons/fa"
 function Header(){
     return(
      <div className="bg-white p-4 border-b">
@@ -14,11 +15,11 @@ function Header(){
                     <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center ">
                         2
                     </span>
-                    <span>🔔</span>
+                    <span><FaBell/></span>
                 </div>
-                <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center " >
+                <button className="w-8 h-8 text-white bg-emerald-500 rounded-full flex items-center justify-center " >
                  HB
-                </div> 
+                </button> 
             </div>
         </div>
         <div className="mt-4">
