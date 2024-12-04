@@ -12,7 +12,7 @@ function Sidenav() {
          { icon: <FaInbox/>, label: "Offline Deposit" },  
     ];
     const menuItemss2 = [
-        { icon: <FaCogs />, label: "Settings" },{ icon: <FaUniversity />, label: "Banks" },
+        { icon: <FaCogs />, label: "Settings" },
         { icon: <FaWrench />, label: "developer tools" }
     ];
     return (

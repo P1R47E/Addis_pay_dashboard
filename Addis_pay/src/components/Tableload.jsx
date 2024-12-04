@@ -34,25 +34,25 @@ function Tableload() {
     };
 
     return (
-        <div className="bg-white rounded-lg shadow">
+        <div className="bg-white rounded-lg ">
             {/* Filter sect */}
-            <div className="p-4 bg-gray-100 flex justify-between items-center">
-                <div>Filter</div>
+            <div className="p-4 bg-gray-100 flex rounded-lg justify-between items-center">
+                <div className="font-sm">Filter</div>
                 <div className="flex space-x-4">
-                    <div>
-                        <label>Status</label>
+                    <div className="flex space-x-2 items-center">
+                        <span>Status</span>
                         <select className=" p-1 border rounded ">
                             <option>Pending</option>
                         </select>
                     </div>
-                    <div>
-                        <label>Sort By</label>
+                    <div className="flex items-center space-x-2">
+                        <span>Sort By</span>
                         <select className="border rounded p-1">
                             <option>Amount</option>
                         </select>
                     </div>
                     <div>
-                        <label>Sort Order</label>
+                        <span>Sort Order</span>
                         <select className="border rounded p-1">
                             <option>Increasing</option>
                             <option>Decreasing</option>
@@ -62,9 +62,9 @@ function Tableload() {
             </div>
 
             {/* main table */}
-            <table className="w-full mt-4">
-                <thead className="bg-gray-50 border-collapse">
-                    <tr>
+            <table className="w-full mt-4 border-collapse shadow">
+                <thead className="bg-gray-200 border-collapse rounded-lg">
+                    <tr className="rounded-lg">
                         <th className="px-4 py-2 border-none ">No</th>
                         <th className="px-4 py-2 text-left border-none">User</th>
                         <th className="text-left px-4 py-2 border-none ">Start Date</th>
@@ -76,7 +76,7 @@ function Tableload() {
                 </thead>
                 <tbody>
                     {tableData.map((data, idx) => (
-                        <tr key={idx} className="border-t">
+                        <tr key={idx} >
                             <td className="px-4 border-b-0 py-2">{data.id}</td>
                             <td className="px-4 border-none py-2">{data.user}</td>
                             <td className="px-4 border-none py-2">{data.startDate}</td>
