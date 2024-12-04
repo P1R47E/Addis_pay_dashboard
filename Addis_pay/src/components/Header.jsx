@@ -5,7 +5,7 @@ function Header(){
      <div className="bg-white p-4 border-b">
         <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
-                <h2 className="text-xl">💳 Instant Payments</h2>
+                <h2 className="text-xl font-semibold text-emerald-500">💳 Instant Payments</h2>
             </div>
             <div className="flex items-center space-x-4">
                 <button className="bg-emerald-500 text-white px-4 py-2 rounded">
